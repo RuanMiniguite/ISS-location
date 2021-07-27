@@ -3,19 +3,21 @@ const api_url_name = 'http://api.open-notify.org/astros.json';
 
 const ISSIcon = L.icon({
     iconUrl: "imagens/ISS.svg",
-    iconSize: [50, 32],
+    iconSize: [62, 40],
     iconAnchor: [25, 36],
 });
+
 
 const mymap = L.map('mapBg').setView([0, 0], 2);
 const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap);
 
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+// const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, { attribution });
-
 tiles.addTo(mymap);
 
+let center = true;
 async function getISS() {
     const response = await fetch(api_url_id);
     const data = await response.json();
@@ -31,7 +33,12 @@ async function getISS() {
     var time =  new Date(timestamp * 1000);
 
     marker.setLatLng([latitude, longitude]);
-    mymap.setView([latitude, longitude], 3)
+ 
+    if(center){
+        mymap.setView([latitude, longitude], 3);
+        center = false;
+    }
+    
 
     document.getElementById('latitude').textContent = latitude;
     document.getElementById('longitude').textContent = longitude;
@@ -53,5 +60,10 @@ async function getPeople(){
 }
 
 getISS();
+function aligh(){
+    center = true
+}
 
-setInterval(getISS, 1500);
+setInterval(getISS, 1000);
+setInterval(aligh, 20000);
+    
