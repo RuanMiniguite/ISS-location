@@ -9,10 +9,23 @@
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" 
+        href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""
+    />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="">
+    </script>
+
     <title>ISS</title>
 </head>
 <body>
-    <h1>ISS</h1>
+    
+    <div id="mapBg"></div>
 
     <p> 
         latitude: <span id="latitude" ></span><br />
@@ -25,9 +38,15 @@
     <p>
         Pessoas: <span id="pessoas"></span>
     </p>
-
     <button onclick="getISS()">GET</button>
+    
+    <br>
+
+    
+
 </body>
+
+
 
 <script src="script.js"></script>
 </html>

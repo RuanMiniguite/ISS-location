@@ -1,5 +1,13 @@
-const api_url_id = 'https://api.wheretheiss.at/v1/satellites/25544'
-const api_url_name = 'http://api.open-notify.org/astros.json'
+const api_url_id = 'https://api.wheretheiss.at/v1/satellites/25544';
+const api_url_name = 'http://api.open-notify.org/astros.json';
+
+
+const mymap = L.map('mapBg').setView([51.505, -0.09], 2);
+const attrribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const tiles = L.tileLayer(tileUrl, { attrribution });
+
+tiles.addTo(mymap);
 
 
 async function getISS() {
@@ -27,19 +35,7 @@ async function getISS() {
 }
 
 
-// async function getGeoLocation(latitude, longitude) {
-//     const response2 = await fetch(`https://api.wheretheiss.at/v1/coordinates/${latitude},${longitude}`)
-//     const data2 = await response2.json()
-//     const {
-//         timezone_id,
-//         country_code
-//     } = data2
 
-//     document.getElementById('timezone_id').textContent = timezone_id 
-//     document.getElementById('country_code').textContent = country_code
-
-//     console.log(data2)
-// }
 
 
 async function getPeople(){
@@ -50,3 +46,5 @@ async function getPeople(){
 
     document.getElementById('pessoas').textContent = list.filter(x=> x.craft == "ISS").length
 }
+
+
