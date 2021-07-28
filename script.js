@@ -21,12 +21,15 @@ const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(mymap);
 
+
 //GET API [Wheretheiss]
 let center = true;
+
 async function getISS() {
     const response = await fetch(api_url_id);
     const data = await response.json();
     const {
+        name,
         altitude,
         latitude,
         longitude,
@@ -37,19 +40,29 @@ async function getISS() {
     //Set Marker
     marker.setLatLng([latitude, longitude]);
     if(center){
-        mymap.setView([latitude, longitude], 3);
-        center = false;
+        if(window.innerWidth > 600){
+            mymap.setView([latitude, longitude], 3);
+            center = false;
+        }else{
+            mymap.setView([latitude, longitude], 1);
+            center = false;
+        }
     }
    
     //Passando a telemetria para HTML
     var time =  new Date(timestamp * 1000);
 
+    document.getElementById('name').textContent = name;
     document.getElementById('latitude').textContent = latitude;
     document.getElementById('longitude').textContent = longitude;
-    document.getElementById('altitude').textContent = altitude.toFixed(2);
+    document.getElementById('altitude').textContent = altitude.toFixed(2) + " km";
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h";
-    document.getElementById('timestamp').textContent =  time.toLocaleString();
+    document.getElementById('timestamp').textContent =  time.toISOString();
     
+    if(document.getElementById('checkbox').checked){
+        center = true
+    }
+
     getPeople();
 }
 
@@ -65,10 +78,5 @@ async function getPeople(){
 
 //Redefinir tela no centro
 getISS();
-function aligh(){
-    center = true
-}
 
-setInterval(getISS, 1000);
-setInterval(aligh, 10000);
-    
+setInterval(getISS, 2000);
