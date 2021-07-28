@@ -23,7 +23,7 @@
     background-color: rgba(27, 31, 35, 0.90);
     color: #FFFFFF;
     font-family: Iceland, arial;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     letter-spacing: 4px;
     line-height: 1.9rem;
     text-transform: uppercase;
@@ -126,46 +126,67 @@ svg {
 
 @media only screen and (max-width: 800px){
     
+    html{
+        overflow: hidden;
+    }
+
     .map{
         display: flexbox;
-        overflow-y: hidden;
+        
     }
 
     #mapBg {
-        height: 70vh;
+        height: 60vh;
     }
     
     .teli{
         justify-content: center;
-        overflow-y: hidden;
-        height: 30vh;
-        font-size: 1rem;
-        font-size: 1.3rem;
+        overflow: hidden;
+
+        line-height: 1.5rem;
+        font-size: 1.3em;
+
+        position: relative;
+
         top: none;
         margin-top: 0rem;
         margin-right: 0rem;
-        position: relative;
-        line-height: 1.5rem;
-        padding: 0;
-        padding-left: 15vw;
+
+        height: 40vh;
+        padding: 0px;
+
+        padding-left: 10vw;
+        padding-bottom: 10px;
     }
 
     .span{
         width: 100vw;
         font-style: unset;
     }
-}
 
-@media only screen and (max-width: 800px){
-    .teli{
-        font-size: 1rem;
+    .switch {
+        top: 0;
+
+        margin-top: 10px;
+        margin-left: 55px;
+    }
+
+    .switch p{
+        margin-top: 20px;
     }
 
 }
 
 @media only screen and (max-width: 500px){
     .teli{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .teli{
+        font-size: 0.8git rem;
     }
 
 }
