@@ -3,6 +3,9 @@ const api_url_id = 'https://api.wheretheiss.at/v1/satellites/25544';
 const api_url_name = 'http://api.open-notify.org/astros.json';
 
 //CONFIGURAÇÃO DO MAPA
+const mymap = L.map('mapBg').setView([0, 0], 2);
+// const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png';
 
 //Icone ISS
 const ISSIcon = L.icon({
@@ -10,21 +13,17 @@ const ISSIcon = L.icon({
     iconSize: [62, 40],
     iconAnchor: [25, 36],
 });
-const mymap = L.map('mapBg').setView([0, 0], 2);
 const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap);
-
 
 //Copyright
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-// const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, { attribution });
+
 tiles.addTo(mymap);
 
 
 //GET API [Wheretheiss]
 let center = true;
-
 async function getISS() {
     const response = await fetch(api_url_id);
     const data = await response.json();
@@ -57,12 +56,12 @@ async function getISS() {
     document.getElementById('longitude').textContent = longitude;
     document.getElementById('altitude').textContent = altitude.toFixed(2) + " km";
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h";
-    document.getElementById('timestamp').textContent =  time.toISOString();
-    
+    // document.getElementById('timestamp').textContent =  time.toISOString();
+    document.getElementById('timestamp').textContent =  time.toUTCString();
+
     if(document.getElementById('checkbox').checked){
         center = true
     }
-
     getPeople();
 }
 
@@ -76,7 +75,5 @@ async function getPeople(){
     document.getElementById('pessoas').textContent = list.filter(x=> x.craft == "ISS").length;
 }
 
-//Redefinir tela no centro
 getISS();
-
 setInterval(getISS, 2000);

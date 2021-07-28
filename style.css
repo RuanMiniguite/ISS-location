@@ -8,17 +8,15 @@
 }
 
 #mapBg {
-    overflow: hidden;
     width: 100%;
     height: 100vh;
-    z-index: 900;
     position: relative;
+    z-index: 900;
+    overflow: hidden;
 }
 
 
-.teli{
-    display: flex;
-    align-items: center;
+.telemetria{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     background-color: rgba(27, 31, 35, 0.90);
     color: #FFFFFF;
@@ -28,6 +26,8 @@
     line-height: 1.9rem;
     text-transform: uppercase;
 
+    display: flex;
+    align-items: center;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -38,11 +38,6 @@
     z-index: 999;
 }
 
-#name{
-    font-size: 1.7rem;
-    color: #FFFFFF;
-}
-
 .span{
     width: 100%;
     font-style: unset;
@@ -50,6 +45,11 @@
 
 .span span{
     color: aqua;
+}
+
+#name{
+    font-size: 1.7rem;
+    color: #FFFFFF;
 }
 
 .switch {
@@ -71,6 +71,7 @@
     text-align: center;
 }
 
+
 .toggle-thumb {
     position: absolute;
     top: 0;
@@ -85,7 +86,7 @@
     cursor: pointer;
   }
 
-  .toggle-thumb:before {
+.toggle-thumb:before {
     content: "";
     height: 26px;
     width: 26px;
@@ -95,17 +96,17 @@
     border-radius: 50%;
     background-color: #E2E8F0;
     transition: .4s all ease;
-  }
+}
 
-  .checkbox {
+.checkbox {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
 
-  .checkbox:checked + .toggle-thumb:before {
+.checkbox:checked + .toggle-thumb:before {
     transform: translateX(26px);
-  }
+}
 
 .toggle-thumb {
     overflow: hidden;
@@ -119,6 +120,7 @@ svg:nth-child(1) {
 svg {
     transition: .4s all ease;
 }
+
 .checkbox:checked + .toggle-thumb > svg {
     transform: translateX(26px);
 }
@@ -130,31 +132,23 @@ svg {
         overflow: hidden;
     }
 
-    .map{
-        display: flexbox;
-        
-    }
-
     #mapBg {
         height: 60vh;
     }
     
-    .teli{
-        justify-content: center;
-        overflow: hidden;
-
+    .telemetria{
         line-height: 1.5rem;
         font-size: 1.3em;
 
-        position: relative;
+        overflow: hidden;
 
+        position: relative;
+        justify-content: center;
+        height: 40vh;
         top: none;
         margin-top: 0rem;
         margin-right: 0rem;
-
-        height: 40vh;
         padding: 0px;
-
         padding-left: 10vw;
         padding-bottom: 10px;
     }
@@ -174,19 +168,16 @@ svg {
     .switch p{
         margin-top: 20px;
     }
-
 }
 
 @media only screen and (max-width: 500px){
-    .teli{
+    .telemetria{
         font-size: 0.9rem;
     }
-
 }
 
 @media only screen and (max-width: 400px){
-    .teli{
+    .telemetria{
         font-size: 0.8git rem;
     }
-
 }
