@@ -8,7 +8,7 @@
 <br>
 
 <div align="center">
-  <img src="https://drive.google.com/file/d/1h07Q60GER6RUmeeJw1TFRYYcc-5L-3db/view?usp=sharing" width=90%>
+  <img src="https://github.com/RuanMiniguite/ISS-location/blob/bd763e81fdd5c4f2586fe85f21a41351d9eb9117/Imagens_git/Desck.png" width=90%>
 </div>
 
 ---
@@ -30,8 +30,8 @@ Telemetry:
 
 <div>
 
-  <img src="https://drive.google.com/file/d/1dhlj5uVyAAn3k52O40ip0IfLzf55lSOR/view?usp=sharing" width="30%">
-  <img src="https://drive.google.com/file/d/1KNbKn0eJmnLDFhcxBzU55_PQeBqvLfrS/view?usp=sharing" width="30%">
+  <img src="https://github.com/RuanMiniguite/ISS-location/blob/bd763e81fdd5c4f2586fe85f21a41351d9eb9117/Imagens_git/Cel_1.png" width="30%">
+  <img src="https://github.com/RuanMiniguite/ISS-location/blob/bd763e81fdd5c4f2586fe85f21a41351d9eb9117/Imagens_git/Cel_2.png" width="30%">
 
 </div>
 
