@@ -7,7 +7,6 @@ const mymap = L.map('mapBg').setView([0, 0], 2);
 // const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png';
 
-//Icone ISS
 const ISSIcon = L.icon({
     iconUrl: "imagens/ISS.svg",
     iconSize: [62, 40],
@@ -15,14 +14,14 @@ const ISSIcon = L.icon({
 });
 const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap);
 
-//Copyright
+// Copyright
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tiles = L.tileLayer(tileUrl, { attribution });
 
 tiles.addTo(mymap);
 
 
-//GET API [Wheretheiss]
+// GET API [Wheretheiss]
 let center = true;
 async function getISS() {
     const response = await fetch(api_url_id);
@@ -36,7 +35,7 @@ async function getISS() {
         timestamp
     } = data
 
-    //Set Marker
+    // Set Marker
     marker.setLatLng([latitude, longitude]);
     if(center){
         if(window.innerWidth > 600){
@@ -48,7 +47,7 @@ async function getISS() {
         }
     }
    
-    //Passando a telemetria para HTML
+    // Passando a telemetria para HTML
     var time =  new Date(timestamp * 1000);
 
     document.getElementById('name').textContent = name;
@@ -65,7 +64,7 @@ async function getISS() {
     getPeople();
 }
 
-//GET API [open-notify]
+// GET API [open-notify]
 async function getPeople(){
     const response = await fetch(api_url_name);
     const people = await response.json();
