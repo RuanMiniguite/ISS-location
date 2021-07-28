@@ -13,6 +13,7 @@ const ISSIcon = L.icon({
 const mymap = L.map('mapBg').setView([0, 0], 2);
 const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap);
 
+
 //Copyright
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 // const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -30,7 +31,6 @@ async function getISS() {
         latitude,
         longitude,
         velocity,
-        visibility,
         timestamp
     } = data
 
@@ -40,7 +40,7 @@ async function getISS() {
         mymap.setView([latitude, longitude], 3);
         center = false;
     }
-
+   
     //Passando a telemetria para HTML
     var time =  new Date(timestamp * 1000);
 
@@ -70,5 +70,5 @@ function aligh(){
 }
 
 setInterval(getISS, 1000);
-setInterval(aligh, 15000);
+setInterval(aligh, 10000);
     
