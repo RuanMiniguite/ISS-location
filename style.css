@@ -39,7 +39,7 @@
 }
 
 .span{
-    width: 100%;
+    width: 420px;
     font-style: unset;
 }
 
@@ -51,6 +51,22 @@
     font-size: 1.7rem;
     color: #FFFFFF;
 }
+
+.IBM-video{
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.IBM-video iframe{
+    width: 480px;
+    height: 270px;
+}
+
 
 .switch {
     display: inline-block;
@@ -136,16 +152,18 @@ svg {
         height: 60vh;
     }
     
+    .IBM-video iframe{
+        width: 240px;
+        height: 135px;
+    }
+
     .telemetria{
         line-height: 1.5rem;
         font-size: 1.3em;
-
-        overflow: hidden;
-
+        
         position: relative;
         justify-content: center;
         height: 40vh;
-        top: none;
         margin-top: 0rem;
         margin-right: 0rem;
         padding: 0px;
@@ -171,8 +189,28 @@ svg {
 }
 
 @media only screen and (max-width: 500px){
+    
+    #mapBg {
+        height: 33vh;
+    }
+    
+    .IBM-video{
+        margin-top: 0;
+        display: flex;
+        position: relative;
+        height: 33vh;
+        width: 100%;
+        background-color: black;
+    }
+
+    .IBM-video iframe{
+        width: 100%;
+        height: 100%;
+    }
+
     .telemetria{
         font-size: 0.9rem;
+        height: 34vh;
     }
 }
 
@@ -180,4 +218,21 @@ svg {
     .telemetria{
         font-size: 0.8git rem;
     }
+}
+
+
+@media only screen and (max-width: 350px){
+    
+    #mapBg {
+        height: 37vh;
+    }
+    
+    .IBM-video{
+        height: 28vh;
+    }
+
+    .telemetria{
+        height: 34vh;
+    }
+
 }

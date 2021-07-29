@@ -32,6 +32,7 @@ async function getISS() {
         latitude,
         longitude,
         velocity,
+        visibility,
         timestamp
     } = data
 
@@ -56,7 +57,20 @@ async function getISS() {
     document.getElementById('altitude').textContent = altitude.toFixed(2) + " km";
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h";
     // document.getElementById('timestamp').textContent =  time.toISOString();
-    document.getElementById('timestamp').textContent =  time.toUTCString();
+    document.getElementById('timestamp').textContent =  
+        time.getUTCDate() + "/" +
+        time.getUTCMonth() + "/" +
+        time.getUTCFullYear() + " " +
+        time.getUTCHours() + ":" +
+        time.getUTCMinutes() + ":" +
+        time.getUTCSeconds()
+    ;
+
+    if(visibility === "daylight"){
+        document.getElementById('visibility').textContent = "Dia"
+    }else{
+        document.getElementById('visibility').textContent = "Noite"
+    }
 
     if(document.getElementById('checkbox').checked){
         center = true
