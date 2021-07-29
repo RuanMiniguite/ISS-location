@@ -75,6 +75,7 @@ async function getISS() {
     if(document.getElementById('checkbox').checked){
         center = true
     }
+
     getPeople();
 }
 
@@ -90,3 +91,11 @@ async function getPeople(){
 
 getISS();
 setInterval(getISS, 2000);
+
+function live(){
+    if(document.getElementById('ibm').checked){
+        document.getElementById('live').style.visibility="visible";
+    }else{
+        document.getElementById('live').style.visibility="hidden";
+    }
+}
