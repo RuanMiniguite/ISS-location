@@ -18,8 +18,8 @@ const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap);
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tiles = L.tileLayer(tileUrl, { attribution });
 
+mymap.zoomControl.remove();
 tiles.addTo(mymap);
-
 
 // GET API [Wheretheiss]
 let center = true;
@@ -38,13 +38,21 @@ async function getISS() {
 
     // Set Marker
     marker.setLatLng([latitude, longitude]);
+
     if(center){
-        if(window.innerWidth > 600){
+        if(window.innerWidth > 1100){
             mymap.setView([latitude, longitude], 3);
             center = false;
-        }else{
-            mymap.setView([latitude, longitude], 1);
+        }else if(window.innerWidth > 550){
+            mymap.setView([latitude, longitude], 3);
             center = false;
+            document.getElementById('tele').checked = true;
+            tele();
+        } else{
+            mymap.setView([latitude, longitude], 2);
+            center = false;
+            document.getElementById('ibm').checked = true;
+            live()
         }
     }
    
@@ -52,8 +60,8 @@ async function getISS() {
     var time =  new Date(timestamp * 1000);
 
     document.getElementById('name').textContent = name;
-    document.getElementById('latitude').textContent = latitude;
-    document.getElementById('longitude').textContent = longitude;
+    document.getElementById('latitude').textContent = latitude.toFixed(2);
+    document.getElementById('longitude').textContent = longitude.toFixed(2);
     document.getElementById('altitude').textContent = altitude.toFixed(2) + " km";
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h";
     // document.getElementById('timestamp').textContent =  time.toISOString();
@@ -63,19 +71,11 @@ async function getISS() {
         time.getUTCFullYear() + " " +
         time.getUTCHours() + ":" +
         time.getUTCMinutes() + ":" +
-        time.getUTCSeconds()
+        time.getUTCSeconds() + " UTC"
     ;
 
-    if(visibility === "daylight"){
-        document.getElementById('visibility').textContent = "Dia"
-    }else{
-        document.getElementById('visibility').textContent = "Noite"
-    }
-
-    if(document.getElementById('checkbox').checked){
-        center = true
-    }
-
+    visib(visibility);
+    aligh();
     getPeople();
 }
 
@@ -92,10 +92,32 @@ async function getPeople(){
 getISS();
 setInterval(getISS, 2000);
 
+function visib(visibility){
+    if(visibility === "daylight"){
+        document.getElementById('visibility').textContent = "Dia"
+    }else{
+        document.getElementById('visibility').textContent = "Noite"
+    }
+}
+
 function live(){
     if(document.getElementById('ibm').checked){
         document.getElementById('live').style.visibility="visible";
     }else{
         document.getElementById('live').style.visibility="hidden";
+    }
+}
+
+function aligh(){
+    if(document.getElementById('checkbox').checked){
+        center = true
+    }
+}
+
+function tele(){
+    if(document.getElementById('tele').checked){
+        document.getElementById('info').style.visibility="visible";
+    }else{
+        document.getElementById('info').style.visibility="hidden";
     }
 }
