@@ -202,8 +202,8 @@ svg {
 }
 
 .social-list a{
-    color: rgba(27, 31, 35, 0.8);
-    font-size:2rem;
+    color: rgba(27, 31, 35, 0.6);
+    font-size:1.8rem;
     justify-content: center;
     transition: color 0.3s;
 }
