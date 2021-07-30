@@ -15,16 +15,13 @@
     background: #232526;
 }
 
-
-
 #mapBg {
     width: 100%;
     height: 100vh;
     position: relative;
     z-index: 900;
-    overflow: hidden;
+    overflow: hidden; 
 }
-
 
 .telemetria{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
@@ -144,7 +141,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(27, 31, 35, 0.90);;
+    background-color: rgba(27, 31, 35, 0.90);
     border-radius: 40px;
     cursor: pointer;
   }
@@ -198,7 +195,7 @@ svg {
 }
 
 .social-list a{
-    color: #6e6e6e;
+    color: rgba(27, 31, 35, 0.8);
     font-size:2rem;
     justify-content: center;
     transition: color 0.3s;
@@ -208,6 +205,19 @@ svg {
     color: #FFFFFF;
 }
 
+/* LOADER */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(27, 31, 35);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 1100px){
     

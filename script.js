@@ -1,3 +1,10 @@
+//Loader
+const overlay = document.querySelector(".overlay");
+
+window?.addEventListener("load", function () {
+    overlay.style.display = "none";
+});
+
 // APIs
 const api_url_id = 'https://api.wheretheiss.at/v1/satellites/25544';
 const api_url_name = 'http://api.open-notify.org/astros.json';
