@@ -1,94 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <link rel="stylesheet" 
-        href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin=""
-    />
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        <link rel="stylesheet" 
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""
+        />
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin="">
-    </script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin="">
+        </script>
 
-    <title>ISS</title>
-</head>
-<body>
+        <title>ISS</title>
+    </head>
+    <body>
 
-    <!-- LOADER -->
-    <div class="overlay">
-        <img src="imagens/loader.gif">
-    </div>
-    
-    <section>
-        <div id="mapBg"></div>
-
-        <div class="IBM-video" id='live'>
-            <iframe width="480" height="270" src="https://www.ustream.tv/embed/17074538" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
-        </div>
-
-        <div class="telemetria" id='info'>
-
-            <p class="span"> 
-                <span id="name"></span><br>
-   
-                Pessoas a bordo: <span id="pessoas"></span><br>
-                Latitude: <span id="latitude" ></span><br>
-                Longitude: <span id="longitude"></span><br>
-                Altitude: <span id="altitude"></span><br>
-                Velocidade: <span id="velocidade"></span><br>
-                Hora: <span id="timestamp"></span><br>
-                Visibilidade: <span id="visibility"></span><br>
-                
-            </p>
-
+        <!-- LOADER -->
+        <div class="overlay">
+            <img src="imagens/loader.gif">
         </div>
         
-        <label class="switch">
-            <input type="checkbox" class="checkbox" id='checkbox' checked>
-            <span class="toggle-thumb">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
-            </span>
-            <p>Auto Center</p>
-        </label>
+        <section>
+            <!-- MAPA -->
+            <div id="mapBg"></div>
 
-        <label class="switch_2">
-            <input type="checkbox" class="checkbox" id='ibm' onchange="live(this)" checked >
-            <span class="toggle-thumb">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
-            </span>
-            <p>Live IBM</p>
-        </label>
+            <!-- LIVE IBM -->
+            <div class="IBM-video" id='live'>
+                <iframe width="480" height="270" src="https://www.ustream.tv/embed/17074538" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+            </div>
 
-        <label class="switch_3">
-            <input type="checkbox" class="checkbox" id='tele' onchange="tele(this)" checked >
-            <span class="toggle-thumb">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
-            </span>
-            <p>Info Estação</p>
-        </label>
+            <!-- TELEMETRIA ISS -->
+            <div class="telemetria" id='info'>
+                <p class="span"> 
+                    <span id="name"></span><br>
+                    Pessoas a bordo: <span id="pessoas"></span><br>
+                    Latitude: <span id="latitude" ></span><br>
+                    Longitude: <span id="longitude"></span><br>
+                    Altitude: <span id="altitude"></span><br>
+                    Velocidade: <span id="velocidade"></span><br>
+                    Hora: <span id="timestamp"></span><br>
+                    Visibilidade: <span id="visibility"></span><br>
+                </p>
+            </div>
+            
+            <!-- BOTÃO ALINHAR CENTRO -->
+            <label class="switch">
+                <input type="checkbox" class="checkbox" id='checkbox' checked>
+                <span class="toggle-thumb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
+                </span>
+                <p>Auto Center</p>
+            </label>
 
- 
-        <div class="social-list">
-            <a href="https://github.com/RuanMiniguite" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    
-    </section>
-    
-</body>
+            <!-- BOTÃO OCUTAR LIVE -->
+            <label class="switch_2">
+                <input type="checkbox" class="checkbox" id='ibm' onchange="live(this)" checked >
+                <span class="toggle-thumb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
+                </span>
+                <p>Live IBM</p>
+            </label>
 
-<script src="script.js"></script>
+            <!-- BOTÃO OCUTAR TELEMETRIA -->
+            <label class="switch_3">
+                <input type="checkbox" class="checkbox" id='tele' onchange="tele(this)" checked >
+                <span class="toggle-thumb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#4ADE80;transform:-ms-filter"><path d="M10 15.586L6.707 12.293 5.293 13.707 10 18.414 19.707 8.707 18.293 7.293z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill:#F87171;transform:-ms-filter"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"></path></svg>
+                </span>
+                <p>Info Estação</p>
+            </label>
+
+            <!-- GIT -->
+            <div class="social-list">
+                <a href="https://github.com/RuanMiniguite" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        
+        </section>
+    </body>
+    <script src="script.js"></script>
 </html>

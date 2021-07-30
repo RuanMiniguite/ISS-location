@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&family=Six+Caps&display=swap');
-
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-
 
 *{
     margin: 0;
@@ -15,6 +13,7 @@
     background: #232526;
 }
 
+/* MAPA */
 #mapBg {
     width: 100%;
     height: 100vh;
@@ -24,8 +23,8 @@
 }
 
 .telemetria{
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
     background-color: rgba(27, 31, 35, 0.90);
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.5);
     color: #FFFFFF;
     font-family: Iceland, arial;
     font-size: 1.3rem;
@@ -44,7 +43,9 @@
     margin-right: 1rem;
     z-index: 999;
 }
+/* FIM MAPA */
 
+/* TELEMETRIA */
 .span{
     width: 420px;
     font-style: unset;
@@ -58,7 +59,9 @@
     font-size: 1.7rem;
     color: #FFFFFF;
 }
+/* FIM TELEMETRIA */
 
+/* LIVE IBM */
 .IBM-video{
     margin-top: 1rem;
     margin-right: 1rem;
@@ -73,8 +76,9 @@
     width: 480px;
     height: 270px;
 }
+/* FIM LIVE IBM */
 
-
+/* BOTÃO ALINHAR CENTRO */
 .switch {
     display: inline-block;
     width: 60px;
@@ -87,6 +91,7 @@
     z-index: 999;
   }
 
+/* BOTÃO OCUTAR LIVE */
 .switch_2{
     display: inline-block;
     width: 60px;
@@ -99,6 +104,7 @@
     z-index: 999;
 }
 
+/* BOTÃO OCUTAR TELEMETRIA */
 .switch_3{
     display: inline-block;
     width: 60px;
@@ -111,6 +117,7 @@
     z-index: 999;
 }
 
+/* TEXTO BOTÃO */
 .switch p{
     margin-top: 1rem;
     font-family: Iceland, arial;
@@ -204,20 +211,26 @@ svg {
 .social-list a:hover{
     color: #FFFFFF;
 }
+/* FIM BOTÃO */
+
 
 /* LOADER */
 .overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: rgb(27, 31, 35);
     width: 100%;
     height: 100%;
-    background-color: rgb(27, 31, 35);
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
 }
+
+/* ------------------------------
+        Responsividade
+------------------------------ */ 
 
 @media only screen and (max-width: 1100px){
     
@@ -235,12 +248,11 @@ svg {
     }
 
     .telemetria{
+        height: 40vh;
         line-height: 1.5rem;
         font-size: 1.3em;
-        
-        position: relative;
         justify-content: center;
-        height: 40vh;
+        position: relative;   
         margin-top: 0rem;
         margin-right: 0rem;
         padding: 0px;
@@ -255,14 +267,12 @@ svg {
 
     .switch {
         top: 0;
-
         margin-top: 1rem;
         margin-left: 1rem;
     }
 
     .switch_2{
         top: 0;
-
         margin-top: 1rem;
         margin-left: 5.2rem;
     }
@@ -285,7 +295,6 @@ svg {
         top: auto;
         right: 0;
         bottom: 0;
-
         margin-bottom: 1rem;
         margin-right: 1rem;
     }
@@ -299,12 +308,12 @@ svg {
     }
     
     .IBM-video{
-        margin-top: 0;
-        display: flex;
-        position: relative;
+        background-color: black;
         height: 33vh;
         width: 100%;
-        background-color: black;
+        display: flex;
+        position: relative;
+        margin-top: 0; 
     }
 
     .IBM-video iframe{
@@ -324,7 +333,7 @@ svg {
 
 @media only screen and (max-width: 400px){
     .telemetria{
-        font-size: 0.8git rem;
+        font-size: 0.8rem;
     }
 }
 
