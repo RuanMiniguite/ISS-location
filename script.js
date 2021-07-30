@@ -72,7 +72,7 @@ async function getISS() {
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h"
     document.getElementById('timestamp').textContent =  
         time.getUTCDate() + "/" +
-        time.getUTCMonth() + "/" +
+        (time.getUTCMonth() + 1) + "/" +
         time.getUTCFullYear() + " " +
         time.getUTCHours() + ":" +
         time.getUTCMinutes() + ":" +
