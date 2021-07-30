@@ -72,4 +72,4 @@ Telemetry:
 
 Ruan Pezzin Miniguite
 
-[![NPM](https://img.shields.io/cocoapods/l/m?down_color=292929&up_color=292929&style=for-the-badge)]("https://github.com/RuanMiniguite/ISS-location/blob/3f920271b11b8ea5ca688e6250582b9da71463d4/LICENSE")
+[![NPM](https://img.shields.io/cocoapods/l/m?style=for-the-badge)](https://github.com/RuanMiniguite/ISS-location/blob/3f920271b11b8ea5ca688e6250582b9da71463d4/LICENSE)
