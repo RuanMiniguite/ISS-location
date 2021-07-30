@@ -66,8 +66,8 @@ async function getISS() {
     var time =  new Date(timestamp * 1000)
 
     document.getElementById('name').textContent = name
-    document.getElementById('latitude').textContent = latitude.toFixed(2)
-    document.getElementById('longitude').textContent = longitude.toFixed(2)
+    document.getElementById('latitude').textContent = latitude
+    document.getElementById('longitude').textContent = longitude
     document.getElementById('altitude').textContent = altitude.toFixed(2) + " km"
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h"
     document.getElementById('timestamp').textContent =  
@@ -80,7 +80,7 @@ async function getISS() {
 
     visib(visibility);
     aligh();
-    getPeople();
+    // getPeople();
 }
 
 // GET API [open-notify]
