@@ -73,7 +73,6 @@ async function getISS() {
         time.getUTCMinutes() + ":" +
         time.getUTCSeconds() + " UTC"
     ;
-
     visib(visibility);
     aligh();
     getPeople();
@@ -119,5 +118,5 @@ function tele(){
         document.getElementById('info').style.visibility="visible";
     }else{
         document.getElementById('info').style.visibility="hidden";
-    }
+    }   
 }

@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&family=Six+Caps&display=swap');
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
+
+::selection {
+    color : #FFFFFF;
+    background: #232526;
+}
+
+
 
 #mapBg {
     width: 100%;
@@ -178,6 +188,26 @@ svg {
     transform: translateX(26px);
 }
 
+.social-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.social-list a{
+    color: #6e6e6e;
+    font-size:2rem;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.social-list a:hover{
+    color: #FFFFFF;
+}
+
 
 @media only screen and (max-width: 1100px){
     
@@ -239,6 +269,16 @@ svg {
     .switch_2 p{
         margin-top: 20px;
     }
+
+    .social-list{
+        left: auto;
+        top: auto;
+        right: 0;
+        bottom: 0;
+
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
     
 }
 
@@ -293,4 +333,15 @@ svg {
         height: 34vh;
     }
 
+}
+
+
+@media only screen and (max-height: 600px){
+    .telemetria{
+        line-height: 1rem;
+    }
+
+    .social-list a{
+        font-size: 1.2rem;
+    }
 }
