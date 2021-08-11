@@ -65,6 +65,7 @@ Telemetry:
 ### IMPLEMENTATION IDEAS
 - [x] Zoom auto (on/off)
 - [ ] Box telemetria flutuante
+- [ ] Pause ao fechar video
 
 <br>
 
