@@ -13,7 +13,7 @@
     background: #232526;
 }
 
-/* MAPA */
+/* MAP */
 #mapBg {
     width: 100%;
     height: 100vh;
@@ -43,9 +43,9 @@
     margin-right: 1rem;
     z-index: 999;
 }
-/* FIM MAPA */
+/* END MAP */
 
-/* TELEMETRIA */
+/* TELEMETRY ISS */
 .span{
     width: 420px;
     font-style: unset;
@@ -59,7 +59,7 @@
     font-size: 1.7rem;
     color: #FFFFFF;
 }
-/* FIM TELEMETRIA */
+/* END TELEMETRY ISS */
 
 /* LIVE IBM */
 .IBM-video{
@@ -76,9 +76,10 @@
     width: 480px;
     height: 270px;
 }
-/* FIM LIVE IBM */
+/* END LIVE IBM */
 
-/* BOTÃO ALINHAR CENTRO */
+
+/* CENTER ALIGN BUTTON */
 .switch {
     display: inline-block;
     width: 60px;
@@ -91,7 +92,7 @@
     z-index: 999;
   }
 
-/* BOTÃO OCUTAR LIVE */
+/* LIVE HIDE BUTTON */
 .switch_2{
     display: inline-block;
     width: 60px;
@@ -104,7 +105,7 @@
     z-index: 999;
 }
 
-/* BOTÃO LIVE OPTION */
+/* LIVE OPTION */
 .switch_3{
     display: inline-block;
     width: 60px;
@@ -117,7 +118,7 @@
     z-index: 999;
 }
 
-/* BOTÃO OCUTAR TELEMETRIA */
+/* HIDE TELEMETRY */
 .switch_4{
     display: inline-block;
     width: 60px;
@@ -130,7 +131,7 @@
     z-index: 999;
 }
 
-/* TEXTO BOTÃO */
+/* TEXT BUTTON */
 .switch p, .switch_2 p, .switch_3 p, .switch_4 p{
     margin-top: 1rem;
     font-family: Iceland, arial;
@@ -199,7 +200,9 @@ svg {
     margin-left: 1rem;
     margin-top: 1rem;
 }
+/* END BUTTON */
 
+/* GIT */
 .social-list a{
     color: rgba(27, 31, 35, 0.6);
     font-size:1.8rem;
@@ -210,7 +213,7 @@ svg {
 .social-list a:hover{
     color: #FFFFFF;
 }
-/* FIM BOTÃO */
+/* END GIT */
 
 
 /* LOADER */
@@ -227,8 +230,9 @@ svg {
     z-index: 1000;
 }
 
+
 /* ------------------------------
-        Responsividade
+            RESPONSIVE
 ------------------------------ */ 
 
 @media only screen and (max-width: 1100px){
@@ -369,7 +373,6 @@ svg {
     .telemetria{
         height: 34vh;
     }
-
 }
 
 
