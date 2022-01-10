@@ -19,12 +19,16 @@ const ISSIcon = L.icon({
     iconSize: [62, 40],
     // iconAnchor: [25, 36],
 });
+
 const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap)
+
 const circle = L.circle({lat: 0, lng: 0}, {
     color: '#00ffff',
     fillColor:'#00ffff',
+    fillOpacity: 0,
+    weight: 2,
     radius: 800000,
-    opacity: 0.1,
+    opacity: 0.5,
 }).addTo(mymap)
 
 // Copyright
