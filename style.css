@@ -310,6 +310,7 @@ svg {
     
 }
 
+
 @media only screen and (max-width: 500px){
     
     html{
@@ -352,6 +353,7 @@ svg {
         top: 0;
     }
 }
+
 
 @media only screen and (max-width: 400px){
     .telemetria{
