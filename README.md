@@ -7,7 +7,7 @@
 <div align="center" id="header">
 
   <a href="https://www.nasa.gov/mission_pages/station/main/index.html">
-    <img src="/assets/LogoISS.png" alt="Logo" width="100">
+    <img src="/assets/LogoISS.png" alt="Logo" width="150">
   </a>
   <h3 align="center">ISS location</h3>
   <p align="center">
@@ -52,7 +52,7 @@
 ## About the project
 
 <div align="center">
-  <img src="/assets/Desktop.png" width=80%>
+  <img src="/assets/Desktop.png" width=90%>
 <br><br>
 
   [![Site][Site-shields]][Site-link]
@@ -76,8 +76,8 @@
 
 <div>
 
-  <img src="/assets/Tablet.png" width="59.3%">
-  <img src="/assets/Mobile.png" width="25%">
+  <img src="/assets/Tablet.png" width="50%">
+  <img src="/assets/Mobile.png" width="14%">
 
 </div>
 
@@ -102,8 +102,8 @@
 ## Implementation ideas
 
 - [x] Auto Center (on/off)
+- [x] Two IBM cameras
 - [ ] Pause when closing video
-- [ ] Two IBM cameras
 
 
 
