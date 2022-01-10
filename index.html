@@ -48,19 +48,18 @@
         </div>
         
         <section>
-            <!-- MAPA -->
+            <!-- MAP -->
             <div id="mapBg"></div>
 
             <!-- LIVE IBM -->
             <div class="IBM-video" id='live'>
-                <iframe id="test" width="480" height="270" src="https://www.ustream.tv/embed/17074538" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
+                <iframe class="ibmlive" width="480" height="270" src="https://www.ustream.tv/embed/17074538" scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none transparent;"></iframe>
             </div>
 
-            <!-- TELEMETRIA ISS -->
+            <!-- TELEMETRY ISS -->
             <div class="telemetria" id='info'>
                 <p class="span">
                     <span id="name"></span><br>
-                    <!-- Pessoas a bordo: <span id="pessoas"></span><br> -->
                     Latitude: <span id="latitude" ></span><br>
                     Longitude: <span id="longitude"></span><br>
                     Altitude: <span id="altitude"></span><br>
@@ -70,7 +69,7 @@
                 </p>
             </div>
             
-            <!-- BOTÃO ALINHAR CENTRO -->
+            <!-- CENTER ALIGN BUTTON -->
             <label class="switch">
                 <input type="checkbox" class="checkbox" id='checkbox' checked>
                 <span class="toggle-thumb">
@@ -80,7 +79,7 @@
                 <p>Auto Center</p>
             </label>
 
-            <!-- BOTÃO OCUTAR LIVE -->
+            <!-- LIVE HIDE BUTTON -->
             <label class="switch_2">
                 <input type="checkbox" class="checkbox" id='ibm' onchange="live(this)" checked >
                 <span class="toggle-thumb">
@@ -90,7 +89,7 @@
                 <p>Live IBM</p>
             </label>
 
-            <!-- BOTÃO OCUTAR TELEMETRIA -->
+            <!-- HIDE TELEMETRY BUTTON -->
             <label class="switch_3">
                 <input type="checkbox" class="checkbox" id='tele' onchange="tele(this)" checked >
                 <span class="toggle-thumb">
