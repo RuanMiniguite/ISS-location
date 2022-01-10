@@ -104,7 +104,7 @@
     z-index: 999;
 }
 
-/* BOTÃO OCUTAR TELEMETRIA */
+/* BOTÃO LIVE OPTION */
 .switch_3{
     display: inline-block;
     width: 60px;
@@ -117,22 +117,21 @@
     z-index: 999;
 }
 
+/* BOTÃO OCUTAR TELEMETRIA */
+.switch_4{
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin-left: 13.6rem;
+    margin-bottom: 3rem;
+    z-index: 999;
+}
+
 /* TEXTO BOTÃO */
-.switch p{
-    margin-top: 1rem;
-    font-family: Iceland, arial;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.switch_2 p{
-    margin-top: 1rem;
-    font-family: Iceland, arial;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.switch_3 p{
+.switch p, .switch_2 p, .switch_3 p, .switch_4 p{
     margin-top: 1rem;
     font-family: Iceland, arial;
     font-size: 1.2rem;
@@ -277,7 +276,7 @@ svg {
         margin-left: 5.2rem;
     }
 
-    .switch_3{
+    .switch_4{
         top: 0;
         z-index: 0;
     }
