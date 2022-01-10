@@ -47,8 +47,11 @@ async function getISS() {
     marker.setLatLng([latitude, longitude])
 
     if(center){
-        if(window.innerWidth > 1100){
+        if(window.innerWidth > 1500){
             mymap.setView([latitude, longitude], 3)
+            center = false
+        }else if(window.innerWidth > 1000){
+            mymap.setView([latitude, longitude + 40], 3)
             center = false
         }else if(window.innerWidth > 550){
             mymap.setView([latitude, longitude], 3)
