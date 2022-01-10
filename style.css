@@ -276,6 +276,12 @@ svg {
         margin-left: 5.2rem;
     }
 
+    .switch_3{
+        top: 0;
+        margin-top: 1rem;
+        margin-left: 9.4rem;
+    }
+    
     .switch_4{
         top: 0;
         z-index: 0;
@@ -327,6 +333,12 @@ svg {
 
     .switch_2 {
        z-index: 0;
+    }
+
+    .switch_3{
+        top: 0;
+        margin-top: 1rem;
+        margin-left: 5.2rem;
     }
 }
 

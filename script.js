@@ -58,8 +58,8 @@ async function getISS() {
         } else{
             mymap.setView([latitude, longitude], 2)
             center = false
-            document.getElementById('ibm').checked = true
-            live()
+            document.getElementById('live1').style.visibility="visible"
+            document.getElementById('live2').style.visibility="visible"
         }
     }
    
@@ -106,9 +106,20 @@ function visib(visibility){
 
 function live(){
     if(document.getElementById('ibm').checked){
-        document.getElementById('live').style.visibility="visible"
+        option();
     }else{
-        document.getElementById('live').style.visibility="hidden"
+        document.getElementById('live1').style.visibility="hidden"
+        document.getElementById('live2').style.visibility="hidden"
+    }
+}
+
+function option(){
+    if(document.getElementById('optionLive').checked){
+        document.getElementById('live1').style.visibility="visible"
+        document.getElementById('live2').style.visibility="hidden"
+    }else{
+        document.getElementById('live1').style.visibility="hidden"
+        document.getElementById('live2').style.visibility="visible"
     }
 }
 
