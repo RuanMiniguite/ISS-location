@@ -17,9 +17,15 @@ const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
 const ISSIcon = L.icon({
     iconUrl: "imagens/ISS.svg",
     iconSize: [62, 40],
-    iconAnchor: [25, 36],
+    // iconAnchor: [25, 36],
 });
 const marker =  L.marker([0, 0], {icon: ISSIcon}).addTo(mymap)
+const circle = L.circle({lat: 0, lng: 0}, {
+    color: '#00ffff',
+    fillColor:'#00ffff',
+    radius: 800000,
+    opacity: 0.1,
+}).addTo(mymap)
 
 // Copyright
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -28,6 +34,7 @@ const tiles = L.tileLayer(tileUrl, { attribution })
 mymap.zoomControl.remove()
 tiles.addTo(mymap)
 option();
+
 
 // GET API [Wheretheiss]
 let center = true
@@ -45,6 +52,7 @@ async function getISS() {
     } = data
 
     marker.setLatLng([latitude, longitude])
+    circle.setLatLng([latitude, longitude])
 
     if(center){
         if(window.innerWidth > 1500){
