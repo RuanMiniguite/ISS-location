@@ -308,6 +308,11 @@ svg {
 
 @media only screen and (max-width: 500px){
     
+    html{
+        overflow: auto;
+        scroll-behavior: smooth;
+    }
+
     #mapBg {
         height: 33vh;
     }
@@ -336,9 +341,7 @@ svg {
     }
 
     .switch_3{
-        top: 0;
-        margin-top: 1rem;
-        margin-left: 5.2rem;
+        z-index: 0;
     }
 }
 
