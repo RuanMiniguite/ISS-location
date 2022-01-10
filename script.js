@@ -9,9 +9,9 @@ window?.addEventListener("load", function () {
 const api_url_id = 'https://api.wheretheiss.at/v1/satellites/25544'
 const api_url_name = 'http://api.open-notify.org/astros.json'
 
-// Configuração do mapa
+// Config map
 const mymap = L.map('mapBg').setView([0, 0], 2)
-// const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+//const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
 
 const ISSIcon = L.icon({
@@ -27,7 +27,7 @@ const tiles = L.tileLayer(tileUrl, { attribution })
 
 mymap.zoomControl.remove()
 tiles.addTo(mymap)
-
+option();
 
 // GET API [Wheretheiss]
 let center = true
@@ -83,17 +83,6 @@ async function getISS() {
 
     visib(visibility);
     aligh();
-    // getPeople();
-}
-
-// GET API [open-notify]
-async function getPeople(){
-    const response = await fetch(api_url_name)
-    const people = await response.json()
-
-    let list = people.people
-
-    document.getElementById('pessoas').textContent = list.filter(x=> x.craft == "ISS").length
 }
 
 getISS()
