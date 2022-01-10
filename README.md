@@ -6,7 +6,7 @@
 <!-- ============== HEADER ============== -->
 <div align="center" id="header">
 
-  <a href="https://github.com/RuanMiniguite">
+  <a href="https://www.nasa.gov/mission_pages/station/main/index.html">
     <img src="/assets/LogoISS.png" alt="Logo" width="100">
   </a>
   <h3 align="center">ISS location</h3>
