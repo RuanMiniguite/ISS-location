@@ -11,8 +11,8 @@ const api_url_name = 'http://api.open-notify.org/astros.json'
 
 // Config map
 const mymap = L.map('mapBg').setView([0, 0], 2)
-const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-//const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
+//const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';     //mapa com erro
+const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
 
 const ISSIcon = L.icon({
     iconUrl: "imagens/ISS.svg",
