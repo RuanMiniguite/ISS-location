@@ -12,7 +12,7 @@ const api_url_name = 'http://api.open-notify.org/astros.json'
 // Config map
 const mymap = L.map('mapBg').setView([0, 0], 2)
 //const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';     
-//const tileUrl = 'https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
+//const tileUrl = 'http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'
 const tileUrl = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
 
 const ISSIcon = L.icon({
@@ -80,10 +80,26 @@ async function getISS() {
     }
    
     var time =  new Date(timestamp * 1000)
+    var target_date = new Date("january 01, 2031").getTime();
+    var dias, horas, minutos, segundos;
+
+    var current_date = new Date().getTime();
+    var segundos_f = (target_date - current_date) / 1000;
+
+    dias = parseInt(segundos_f / 86400);
+    segundos_f = segundos_f % 86400;
+    
+    horas = parseInt(segundos_f / 3600);
+    segundos_f = segundos_f % 3600;
+    
+    minutos = parseInt(segundos_f / 60);
+    segundos = parseInt(segundos_f % 60);
+
+    document.getElementById('Tdesorbita').textContent = "T- " + dias  + " D | " + horas + ":" + minutos + ":" + segundos
 
     document.getElementById('name').textContent = name
-    document.getElementById('latitude').textContent = latitude
-    document.getElementById('longitude').textContent = longitude
+    document.getElementById('latitude').textContent = latitude + "°"
+    document.getElementById('longitude').textContent = longitude + "°"
     document.getElementById('altitude').textContent = altitude.toFixed(2) + " km"
     document.getElementById('velocidade').textContent = velocity.toFixed(2) + " km/h"
     document.getElementById('timestamp').textContent =  
