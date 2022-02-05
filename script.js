@@ -95,8 +95,6 @@ async function getISS() {
     minutos = parseInt(segundos_f / 60);
     segundos = parseInt(segundos_f % 60);
 
-    document.getElementById('Tdesorbita').textContent = "T- " + dias  + " D | " + horas + ":" + minutos + ":" + segundos
-
     document.getElementById('name').textContent = name
     document.getElementById('latitude').textContent = latitude + "°"
     document.getElementById('longitude').textContent = longitude + "°"
@@ -109,6 +107,8 @@ async function getISS() {
         time.getUTCHours() + ":" +
         time.getUTCMinutes() + ":" +
         time.getUTCSeconds() + " UTC"
+
+    document.getElementById('Tdesorbita').textContent = "T- " + dias  + " D | " + horas + ":" + minutos + ":" + segundos
 
     visib(visibility);
     aligh();
