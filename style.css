@@ -28,7 +28,7 @@
     color: #FFFFFF;
     font-family: Iceland, arial;
     font-size: 1.3rem;
-    letter-spacing: 2.5px;
+    letter-spacing: 2.9px;
     line-height: 1.6rem;
     text-transform: uppercase;
 
@@ -333,7 +333,7 @@ svg {
     
     .IBM-video{
         background-color: black;
-        height: 33vh;
+        height: 25vh;
         width: 100%;
         display: flex;
         position: relative;
@@ -346,10 +346,10 @@ svg {
     }
 
     .telemetria{
-        padding: 60px 0px;
+        padding: 50px 0px;
         text-align: center;
         font-size: 1.2rem;
-        height: 35vh;
+        height: 33vh;
         align-items: start;
     }
 
@@ -386,7 +386,7 @@ svg {
     }
 
     .telemetria{
-        height: 34vh;
+        height: 30vh;
     }
 }
 
