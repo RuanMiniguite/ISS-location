@@ -28,7 +28,7 @@
     color: #FFFFFF;
     font-family: Iceland, arial;
     font-size: 1.3rem;
-    letter-spacing: 4px;
+    letter-spacing: 2.5px;
     line-height: 1.6rem;
     text-transform: uppercase;
 
@@ -78,6 +78,12 @@
 }
 /* END LIVE IBM */
 
+
+.bar-button{
+    position: absolute;
+    display: flex;
+    margin-left: 0px;
+}
 
 /* CENTER ALIGN BUTTON */
 .switch {
@@ -254,7 +260,7 @@ svg {
     .telemetria{
         height: 40vh;
         line-height: 1.5rem;
-        font-size: 1.3em;
+        font-size: 1.4em;
         justify-content: center;
         position: relative;   
         margin-top: 0rem;
@@ -263,6 +269,7 @@ svg {
         padding-left: 10vw;
         padding-bottom: 10px;
         box-shadow: none;
+        letter-spacing: 3px;
     }
 
     .span{
@@ -313,7 +320,7 @@ svg {
 }
 
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 540px){
     
     html{
         overflow: auto;
@@ -339,9 +346,13 @@ svg {
     }
 
     .telemetria{
-        font-size: 0.9rem;
-        height: 34vh;
+        padding: 60px 0px;
+        text-align: center;
+        font-size: 1.2rem;
+        height: 35vh;
+        align-items: start;
     }
+
 
     .switch_2 {
        z-index: 0;
