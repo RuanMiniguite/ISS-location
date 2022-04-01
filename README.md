@@ -1,18 +1,14 @@
 <!--  
     Ruan Pezzin Miniguite
-    V. 2.1 
+    V. 2.2 
 -->
 
 <!-- ============== HEADER ============== -->
 <div align="center" id="header">
-
-  <a href="https://www.nasa.gov/mission_pages/station/main/index.html">
-    <img src="/assets/LogoISS.png" alt="Logo" width="150">
-  </a>
-  <h3 align="center">ISS location</h3>
-  <p align="center">
-    International space station location.
-  </p>
+  <a href="https://www.nasa.gov/mission_pages/station/main/index.html"><img src="/assets/LogoISS.png" alt="Logo" width="140"></a>
+  
+  <h3>ISS location</h3>
+  <p>International space station location</p>
 </div>
 
 
@@ -33,6 +29,7 @@
 ---
 
 
+
 <!-- ============== SHIELDS ============== -->
 <div align="center">
 
@@ -42,60 +39,61 @@
   [![GitHub License][GitHub License-shields]][GitHub License-link]
   [![Website][Website-shields]][Website-link]
 
-  <h4 align="center"> 
-    🚧  Project under construction...  🚧
-  </h4>
+  <h4>🚧 Project under construction... 🚧</h4>
 </div>
+
 
 
 <!-- ============== ABOUT ============== -->
 ## About the project
 
 <div align="center">
-  <img src="/assets/Desktop.png" width=90%>
-<br><br>
+  <img src="/assets/Desktop.png" alt="Print" width=90% ><br><br>
 
   [![Site][Site-shields]][Site-link]
 </div>
 
 <p>Site shows ISS (International Space Station) telemetry in real time, in addition to displaying its geographical position on the map.</p>
 
+<h6> Telemetry: </h6>
 
-<h4> Telemetry: </h4>
-
-- Latitude
-- Longitude
-- Altitude
-- Speed
-- Hour
-- Visibility
+```
+-> Latitude
+-> Longitude
+-> Altitude
+-> Speed
+-> Hour
+-> Visibilit
+-> Operating time 
+```
 
 
 <!-- ============== LAYOUT ============== -->
 ## Layout
 
 <div>
-
-  <img src="/assets/Tablet.png" width="50%">
-  <img src="/assets/Mobile.png" width="14%">
-
+  <img src="/assets/Tablet.png" alt="Print" width="50%">
+  <img src="/assets/Mobile.png" alt="Print" width="14%">
 </div>
+
 
 
 <!-- ============== LANGUAGE ============== -->
 ## Language and tools
 
-<h4>Front end</h4>
- <ol>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>JavaScript</li>
-  </ol>
- 
-<h4>Back end</h4>
- <ol>
-    <li>Heroku</li>
-  </ol>
+#### Front end
+```
+> HTML5
+> CSS3
+> JavaScript
+```
+
+#### Back end
+```
+> Heroku
+> PHP
+```
+
 
 
 <!-- ============== IDEAS ============== -->
@@ -110,6 +108,9 @@
 <!-- ============== INSTALLATION ============== -->
 ## Installation
 
+<h4>Requirements</h4>
+<!-- Write here -->
+
 ```
 Git Clone https://github.com/RuanMiniguite/ISS-location.git
 ```
@@ -118,14 +119,13 @@ Git Clone https://github.com/RuanMiniguite/ISS-location.git
 <!-- ============== LICENSE ============== -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- ============== AUTHOR ============== -->
 ## Author
 
-[<img alt="RuanMiniguite" src="https://github.com/RuanMiniguite.png?size=115" width="115"><br><sub>@RuanMiniguite</sub>](https://github.com/RuanMiniguite)
-
+[<img alt="RuanMiniguite" src="https://github.com/RuanMiniguite.png?size=210" width="115"><br><sub>@RuanMiniguite</sub>](https://github.com/RuanMiniguite)
 
 
 <p align="right">(<a href="#header">back to top</a>)</p>
@@ -136,13 +136,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [Site-link]: https://trackeriss.herokuapp.com/
 [GitHub License-link]: https://github.com/RuanMiniguite/ISS-location/blob/01423e7909d5cec594db6904d5e56bbd7e684aa9/LICENSE
 
-
 <!-- Alterar caminho para repositorio [Template-Readme] -->
 [GitHub repo size-shields]: https://img.shields.io/github/repo-size/RuanMiniguite/ISS-location?style=for-the-badge
 [GitHub language count-shields]: https://img.shields.io/github/languages/count/RuanMiniguite/ISS-location?style=for-the-badge
 [GitHub forks-shields]: https://img.shields.io/github/forks/RuanMiniguite/ISS-location?style=for-the-badge
 
-
+<!-- link Shields-->
 [GitHub License-shields]: https://img.shields.io/cocoapods/l/m?down_color=292929&up_color=292929&style=for-the-badge
 [Site-shields]: https://img.shields.io/badge/Site-Live-292929?style=for-the-badge&logo=web&logoColor=white
 [Website-link]: https://github.com/RuanMiniguite/Commit-Message
