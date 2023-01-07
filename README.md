@@ -90,7 +90,7 @@
 
 #### Back end
 ```
-> Heroku
+> GitHub Page
 > PHP
 ```
 
@@ -133,7 +133,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- ============== LINKs ============== -->
 <!-- Alterar link -->
-[Site-link]: https://trackeriss.herokuapp.com/
+[Site-link]: https://ruanminiguite.github.io/ISS-location/
 [GitHub License-link]: https://github.com/RuanMiniguite/ISS-location/blob/01423e7909d5cec594db6904d5e56bbd7e684aa9/LICENSE
 
 <!-- Alterar caminho para repositorio [Template-Readme] -->
