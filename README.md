@@ -1,20 +1,28 @@
 <!--  
-    Ruan Pezzin Miniguite
-    V. 2.2 
+  Ruan Pezzin Miniguite
+  V. 3.0
 -->
+
 
 <!-- ============== HEADER ============== -->
 <div align="center" id="header">
-  <a href="https://www.nasa.gov/mission_pages/station/main/index.html"><img src="/assets/LogoISS.png" alt="Logo" width="140"></a>
+    
+  [![IL](https://user-images.githubusercontent.com/82480542/215230351-a4101899-81c8-4bdc-ad7b-30d594ee89e5.png)][Site-link]
+
+  ![GitHub repo size][GitHub repo size-shields]
+  ![GitHub language count][GitHub language count-shields]
+  ![GitHub forks][GitHub forks-shields]
+  ![GitHub stars][GitHub stars-shields]
+  [![GitHub License][GitHub License-shields]][GitHub License-link]
+  [![Website][Website-shields]][Website-link]
   
-  <h3>ISS location</h3>
-  <p>International space station location</p>
 </div>
 
+---
 
-<!-- ===== SUMARIO ===== -->
+<!-- ===== INDEX ===== -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Index</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#layout">Layout</a></li>
@@ -26,36 +34,21 @@
   </ol>
 </details>
 
----
-
-
-
-<!-- ============== SHIELDS ============== -->
-<div align="center">
-
-  ![GitHub repo size][GitHub repo size-shields]
-  ![GitHub language count][GitHub language count-shields]
-  ![GitHub forks][GitHub forks-shields]
-  [![GitHub License][GitHub License-shields]][GitHub License-link]
-  [![Website][Website-shields]][Website-link]
-
-  <h4>🚧 Project under construction... 🚧</h4>
-</div>
-
 
 
 <!-- ============== ABOUT ============== -->
 ## About the project
 
 <div align="center">
-  <img src="/assets/Desktop.png" alt="Print" width=90% ><br><br>
+  
+  <img src="/assets/ISS_Tela_PC.gif" alt="Screen"><br><br>
 
   [![Site][Site-shields]][Site-link]
 </div>
 
 <p>Site shows ISS (International Space Station) telemetry in real time, in addition to displaying its geographical position on the map.</p>
 
-<h6> Telemetry: </h6>
+##### Telemetry:
 
 ```
 -> Latitude
@@ -68,12 +61,14 @@
 ```
 
 
+
 <!-- ============== LAYOUT ============== -->
 ## Layout
 
 <div>
-  <img src="/assets/Tablet.png" alt="Print" width="50%">
-  <img src="/assets/Mobile.png" alt="Print" width="14%">
+  <img src="https://user-images.githubusercontent.com/82480542/215234401-cfa071d9-fe1a-41b9-a954-ce78810d6078.png" alt="Print">
+  <img src="https://user-images.githubusercontent.com/82480542/215230831-e6b2a93b-c9e8-48c5-be63-2c509b926ef5.png" alt="Print" width="25%">
+  <img src="https://user-images.githubusercontent.com/82480542/215230917-c8ebc7c6-ebc6-420f-ab3a-9d905117fbda.png" alt="Print" width="25%">
 </div>
 
 
@@ -83,15 +78,16 @@
 
 #### Front end
 ```
-> HTML5
-> CSS3
-> JavaScript
+>
+>
+>
 ```
 
 #### Back end
 ```
-> GitHub Page
-> PHP
+>
+>
+>
 ```
 
 
@@ -99,9 +95,8 @@
 <!-- ============== IDEAS ============== -->
 ## Implementation ideas
 
-- [x] Auto Center (on/off)
-- [x] Two IBM cameras
-- [ ] Pause when closing video
+- [x] Example
+- [ ] Example
 
 
 
@@ -109,40 +104,48 @@
 ## Installation
 
 <h4>Requirements</h4>
-<!-- Write here -->
 
+<p>Write here</p>
+
+
+#### Git Clone
 ```
-Git Clone https://github.com/RuanMiniguite/ISS-location.git
+Git Clone https://github.com/RuanMiniguite/Template-Readme.git
 ```
+
 
 
 <!-- ============== LICENSE ============== -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Copyright © 2023 [Ruan Miniguite](https://github.com/RuanMiniguite).<br />
+This project is [MIT][GitHub License-link] licensed.
+
 
 
 <!-- ============== AUTHOR ============== -->
 ## Author
 
-[<img alt="RuanMiniguite" src="https://github.com/RuanMiniguite.png?size=210" width="115"><br><sub>@RuanMiniguite</sub>](https://github.com/RuanMiniguite)
-
+[<img alt="RuanMiniguite" src="https://github.com/RuanMiniguite.png?size=330" width="115"><br><sub>@RuanMiniguite</sub>](https://github.com/RuanMiniguite)
 
 <p align="right">(<a href="#header">back to top</a>)</p>
 
 
+
+
 <!-- ============== LINKs ============== -->
 <!-- Alterar link -->
-[Site-link]: https://ruanminiguite.github.io/ISS-location/
-[GitHub License-link]: https://github.com/RuanMiniguite/ISS-location/blob/01423e7909d5cec594db6904d5e56bbd7e684aa9/LICENSE
+[Site-link]: https://github.com/RuanMiniguite/Template-Readme
+[GitHub License-link]: https://github.com/RuanMiniguite/Template-Readme/blob/fe381e528da59c829814c405ef7287b10a1a15ab/LICENSE
 
 <!-- Alterar caminho para repositorio [Template-Readme] -->
-[GitHub repo size-shields]: https://img.shields.io/github/repo-size/RuanMiniguite/ISS-location?style=for-the-badge
-[GitHub language count-shields]: https://img.shields.io/github/languages/count/RuanMiniguite/ISS-location?style=for-the-badge
-[GitHub forks-shields]: https://img.shields.io/github/forks/RuanMiniguite/ISS-location?style=for-the-badge
+[GitHub repo size-shields]: https://img.shields.io/github/repo-size/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
+[GitHub language count-shields]: https://img.shields.io/github/languages/count/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
+[GitHub forks-shields]: https://img.shields.io/github/forks/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
+[GitHub stars-shields]: https://img.shields.io/github/stars/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
 
-<!-- link Shields-->
-[GitHub License-shields]: https://img.shields.io/cocoapods/l/m?down_color=292929&up_color=292929&style=for-the-badge
+<!-- Permalink Shields-->
+[GitHub License-shields]: https://img.shields.io/cocoapods/l/m?down_color=292929&up_color=292929&color=292929&style=for-the-badge
 [Site-shields]: https://img.shields.io/badge/Site-Live-292929?style=for-the-badge&logo=web&logoColor=white
 [Website-link]: https://github.com/RuanMiniguite/Commit-Message
 [Website-shields]: https://img.shields.io/website?down_color=292929&down_message=404&style=for-the-badge&logo=github&up_color=292929&up_message=Commit&url=https%3A%2F%2Fgithub.com%2FRuanMiniguite%2FCommit-Message
