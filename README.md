@@ -65,8 +65,8 @@
 <!-- ============== LAYOUT ============== -->
 ## Layout
 
-<div>
-  <img src="https://user-images.githubusercontent.com/82480542/215234401-cfa071d9-fe1a-41b9-a954-ce78810d6078.png" alt="Print">
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/82480542/215234401-cfa071d9-fe1a-41b9-a954-ce78810d6078.png" alt="Print" width="80%">
   <img src="https://user-images.githubusercontent.com/82480542/215230831-e6b2a93b-c9e8-48c5-be63-2c509b926ef5.png" alt="Print" width="25%">
   <img src="https://user-images.githubusercontent.com/82480542/215230917-c8ebc7c6-ebc6-420f-ab3a-9d905117fbda.png" alt="Print" width="25%">
 </div>
@@ -78,16 +78,15 @@
 
 #### Front end
 ```
->
->
->
+> HTML 5
+> CSS 3
+> Java Script
 ```
 
 #### Back end
 ```
->
->
->
+> Java Script
+> Github Page
 ```
 
 
@@ -95,22 +94,18 @@
 <!-- ============== IDEAS ============== -->
 ## Implementation ideas
 
-- [x] Example
-- [ ] Example
+- [x] Auto Center (on/off)
+- [x] Two IBM cameras
+- [ ] Pause when closing video
 
 
 
 <!-- ============== INSTALLATION ============== -->
 ## Installation
 
-<h4>Requirements</h4>
-
-<p>Write here</p>
-
-
 #### Git Clone
 ```
-Git Clone https://github.com/RuanMiniguite/Template-Readme.git
+Git Clone https://github.com/RuanMiniguite/ISS-location.git
 ```
 
 
@@ -135,14 +130,14 @@ This project is [MIT][GitHub License-link] licensed.
 
 <!-- ============== LINKs ============== -->
 <!-- Alterar link -->
-[Site-link]: https://github.com/RuanMiniguite/Template-Readme
-[GitHub License-link]: https://github.com/RuanMiniguite/Template-Readme/blob/fe381e528da59c829814c405ef7287b10a1a15ab/LICENSE
+[Site-link]: https://ruanminiguite.github.io/ISS-location/
+[GitHub License-link]: https://github.com/RuanMiniguite/ISS-location/blob/1150fa9f045d366d79d65f778d426dfe4c529b72/LICENSE
 
 <!-- Alterar caminho para repositorio [Template-Readme] -->
-[GitHub repo size-shields]: https://img.shields.io/github/repo-size/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
-[GitHub language count-shields]: https://img.shields.io/github/languages/count/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
-[GitHub forks-shields]: https://img.shields.io/github/forks/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
-[GitHub stars-shields]: https://img.shields.io/github/stars/RuanMiniguite/Template-Readme?style=for-the-badge&color=292929
+[GitHub repo size-shields]: https://img.shields.io/github/repo-size/RuanMiniguite/ISS-location?style=for-the-badge&color=292929
+[GitHub language count-shields]: https://img.shields.io/github/languages/count/RuanMiniguite/ISS-location?style=for-the-badge&color=292929
+[GitHub forks-shields]: https://img.shields.io/github/forks/RuanMiniguite/ISS-location?style=for-the-badge&color=292929
+[GitHub stars-shields]: https://img.shields.io/github/stars/RuanMiniguite/ISS-location?style=for-the-badge&color=292929
 
 <!-- Permalink Shields-->
 [GitHub License-shields]: https://img.shields.io/cocoapods/l/m?down_color=292929&up_color=292929&color=292929&style=for-the-badge
