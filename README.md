@@ -41,7 +41,7 @@
 
 <div align="center">
   
-  <img src="/assets/ISS_Tela_PC.gif" alt="Screen"><br><br>
+  <img src="/assets/ISS_Tela_PC.gif" alt="Screen"><br>
 
   [![Site][Site-shields]][Site-link]
 </div>
